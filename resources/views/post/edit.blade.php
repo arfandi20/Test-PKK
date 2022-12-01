@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <h1> Edit Data </h1>
@@ -23,11 +22,11 @@
             <input type="date" class="form-control @error('tanggal') is-invalid @enderror" name="tanggal" value="{{$data->tanggal}}">
         </div>
         
-        @if (Auth::user()->role == 'admin')
-        <div class="form-group">
+        @if (Auth::user()->role == 'editor')
+        <div class="form-group" hidden>
             <label for="">Status</label>
             <select class="form-select" aria-label="Default select example" name="status">
-                <option selected>{{ $data->status }}</option>
+                <option value="{{ $data->status }}">{{ $data->status }}</option>
                 <option value="aktif" @selected($data->status=='aktif')>aktif</option>
                 <option value="tdk" @selected($data->status=='non')>non-aktif</option>
             </select>
@@ -48,3 +47,5 @@
     </form>
 </div>
 @endsection
+
+

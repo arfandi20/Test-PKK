@@ -25,8 +25,8 @@
             <textarea type="text" class="form-control @error('desc_produk') is-invalid @enderror" name="desc_produk" value="">{{$data->descProduk}}</textarea>
         </div>
 
-        @if (Auth::user()->role == 'admin')
-        <div class="form-group">
+        @if (Auth::user()->role == 'editor')
+        <div class="form-group" hidden>
             <label for="">Status</label>
             <select class="form-select" aria-label="Default select example" name="status">
                 <option selected>Open this select menu</option>
