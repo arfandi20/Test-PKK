@@ -120,4 +120,9 @@ class PostController extends Controller
 
     return view('beranda', compact('data'));
     }
+
+    public function postDetail(post $post)
+    {
+        return view('detail',compact('post'));
+    }
 }

@@ -43,8 +43,6 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('deleteuser/{id}', [UserController::class, 'destroy'])->name('deleteuser');
 });
 
-Route::get('beranda', [PostController::class, 'beranda']);
+Route::get('beranda', [PostController::class, 'beranda'])->name('beranda');;
 
-Route::get('rekomendasi', function () {
-    return view('rekomendasi');
-});
+Route::get('post-detail/{post}', [PostController::class, 'postDetail'])->name('post.detail');

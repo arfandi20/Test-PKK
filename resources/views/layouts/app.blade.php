@@ -16,9 +16,9 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<body class="bg-dark">
+    <div id="app" >
+        <nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -76,6 +76,11 @@
             @yield('content')
         </main>
     </div>
+    <footer class="footer mt-auto py-3 bg-light fixed-bottom mt-3">
+        <div class="container">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
     <script src="{{ asset('rekomendasi.js')}}"></script>
 </body>
 </html>

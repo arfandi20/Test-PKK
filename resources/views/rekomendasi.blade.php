@@ -40,22 +40,22 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="">Keluhan</label>
-                                    <input type="text" class="form-control mt-3" id="hasilkeluhan">
+                                    <input type="text" class="form-control mt-3" id="hasilkeluhan" readonly>
                                 </div>
 
                                 <div class="form-group mt-3">
                                     <label for="">Nama Jamu</label>
-                                    <input type="text" class="form-control mt-3" id="nama_jamu">
+                                    <input type="text" class="form-control mt-3" id="nama_jamu" readonly>
                                 </div>
                                 
                                 <div class="form-group mt-3">
                                     <label for="">Umur</label>
-                                    <input type="number" class="form-control mt-3" id="umur" placeholder="">
+                                    <input type="number" class="form-control mt-3" id="umur" placeholder="" readonly>
                                 </div>
 
                                 <div class="form-group mt-3">
                                     <label for="">Saran Penggunaan</label>
-                                    <input type="text" class="form-control mt-3" id="saran">
+                                    <input type="text" class="form-control mt-3" id="saran" readonly>
                                 </div>
 
                                 <input type="button" class="btn btn-primary mt-3" value="Hapus" onclick="hapus()">
